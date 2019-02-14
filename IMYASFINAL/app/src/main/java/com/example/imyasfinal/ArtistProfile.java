@@ -102,15 +102,15 @@ public class ArtistProfile extends AppCompatActivity {
                 if(dataSnapshot.exists()){
                     Picasso.get().load(artist.getImage()).into(artist_imag);
 
-                    artist_lastname.setText(artist.getLastname());
+                    artist_lastname.setText("Lastname: "+artist.getLastname());
 
-                    artist_fname.setText(artist.getFirstname());
+                    artist_fname.setText("Firstname: "+artist.getFirstname());
 
-                    getArtist_cont.setText(artist.getContact());
+                    getArtist_cont.setText("Contact Number: "+artist.getContact());
 
-                    artist_email1.setText(artist.getEmail());
+                    artist_email1.setText("Email: "+artist.getEmail());
 
-                    artist_description1.setText(artist.getDescription());
+                    artist_description1.setText("Description: "+artist.getDescription());
                 }
             }
 

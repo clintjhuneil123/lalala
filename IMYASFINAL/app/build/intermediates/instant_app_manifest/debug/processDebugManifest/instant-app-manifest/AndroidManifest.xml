@@ -36,11 +36,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.imyasfinal.Booking" />
         <activity android:name="com.example.imyasfinal.ArtistProfile" />
         <activity android:name="com.example.imyasfinal.AddImages" />
         <activity android:name="com.example.imyasfinal.ArtistAddList" />
         <activity android:name="com.example.imyasfinal.PendingStatus" />
-        <activity android:name="com.example.imyasfinal.Cart" />
         <activity android:name="com.example.imyasfinal.ArtistDetail" />
         <activity android:name="com.example.imyasfinal.ArtistList" />
         <activity

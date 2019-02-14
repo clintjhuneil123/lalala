@@ -20,9 +20,7 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     private ItemClickListener itemClickListener;
 
 
-    public void setItemClickListener(ItemClickListener itemClickListener) {
-        this.itemClickListener = itemClickListener;
-    }
+
 
 
     public ListViewHolder(@NonNull View itemView) {
@@ -31,7 +29,12 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         list_image = (ImageView) itemView.findViewById(R.id.list_image);
         list_name = (TextView) itemView.findViewById(R.id.list_name);
 
+        itemView.setOnCreateContextMenuListener(this);
         itemView.setOnClickListener(this);
+    }
+
+    public void setItemClickListener(ItemClickListener itemClickListener) {
+        this.itemClickListener = itemClickListener;
     }
 
     @Override
@@ -44,6 +47,6 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     public void onCreateContextMenu(ContextMenu contextMenu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         contextMenu.setHeaderTitle("Select the action");
         contextMenu.add(0,0,getAdapterPosition(), CommonArt.UPDATE);
-        contextMenu.add(0,0,getAdapterPosition(), CommonArt.DELETE);
+        contextMenu.add(0,1,getAdapterPosition(), CommonArt.DELETE);
     }
 }

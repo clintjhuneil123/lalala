@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Administrator\\Desktop\\heyyooooo\\IMYASFINAL\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\Administrator\\Pictures\\IMYASFINAL\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\Desktop\\heyyooooo\\IMYASFINAL\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "source": "C:\\Users\\Administrator\\Pictures\\IMYASFINAL\\app\\src\\main\\res\\values-v21\\styles.xml",
                     "from": {
                         "startLines": "2,13,8",
                         "startColumns": "4,4,4",

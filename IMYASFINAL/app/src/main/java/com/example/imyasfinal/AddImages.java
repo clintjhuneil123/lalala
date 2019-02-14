@@ -41,15 +41,15 @@ public class AddImages extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         images = database.getReference("ArtistPortfolio");
 
-        numberButton1 = (ElegantNumberButton) findViewById(R.id.number_button);
+//        numberButton1 = (ElegantNumberButton) findViewById(R.id.number_button);
 
-        artist_location1 = (TextView) findViewById(R.id.artist_loc);
-        artist_date1 = (TextView) findViewById(R.id.artist_date);
-        artist_time1 = (TextView) findViewById(R.id.artist_time);
-        artist_description1 = (TextView) findViewById(R.id.artist_description);
-        artist_name1 = (TextView) findViewById(R.id.artist_name);
-        artist_price1 = (TextView) findViewById(R.id.artist_price);
-        artist_image1 = (ImageView) findViewById(R.id.img_artist);
+        artist_location1 = (TextView) findViewById(R.id.artist_loc1);
+        artist_date1 = (TextView) findViewById(R.id.artist_date1);
+        artist_time1 = (TextView) findViewById(R.id.artist_time1);
+        artist_description1 = (TextView) findViewById(R.id.artist_description1);
+        artist_name1 = (TextView) findViewById(R.id.artist_name1);
+        artist_price1 = (TextView) findViewById(R.id.artist_price1);
+        artist_image1 = (ImageView) findViewById(R.id.img_artist1);
 
         collapsingToolbarLayout1 = (CollapsingToolbarLayout) findViewById(R.id.collapsing1);
         collapsingToolbarLayout1.setExpandedTitleTextAppearance(R.style.ExpandedAppbar);

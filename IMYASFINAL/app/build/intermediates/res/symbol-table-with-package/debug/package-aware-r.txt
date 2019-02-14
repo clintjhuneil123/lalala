@@ -1245,6 +1245,12 @@ id auto
 id barrier
 id beginning
 id blocking
+id book_date
+id book_location
+id book_people
+id book_rate
+id book_status
+id book_time
 id bottom
 id btnBack
 id btnFinish
@@ -1338,6 +1344,7 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imagvIEW
 id img_artist
 id img_artist1
 id img_profile1
@@ -1398,13 +1405,8 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id number_button
 id number_button1
 id number_counter
-id order_address
-id order_id
-id order_phone
-id order_status
 id outline
 id packed
 id parallax
@@ -1421,6 +1423,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id recycler_art
+id recycler_book
 id recycler_list
 id recycler_list1
 id recycler_menu
@@ -1599,6 +1602,7 @@ layout activity_artist_detail
 layout activity_artist_home
 layout activity_artist_list
 layout activity_artist_profile
+layout activity_booking
 layout activity_cart
 layout activity_home
 layout activity_login_artist

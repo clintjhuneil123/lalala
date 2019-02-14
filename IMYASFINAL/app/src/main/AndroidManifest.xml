@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ArtistProfile"></activity>
+        <activity android:name=".Booking"></activity>
+        <activity android:name=".ArtistProfile" />
         <activity android:name=".AddImages" />
         <activity android:name=".ArtistAddList" />
         <activity android:name=".PendingStatus" />
-        <activity android:name=".Cart" />
         <activity android:name=".ArtistDetail" />
         <activity android:name=".ArtistList" />
         <activity

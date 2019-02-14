@@ -1,6 +1,7 @@
 package com.example.imyasfinal;
 
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
@@ -12,7 +13,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -24,13 +24,13 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.example.imyasfinal.Database.Database;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.StorageReference;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.squareup.picasso.Picasso;
 
@@ -48,7 +48,7 @@ public class ArtistDetail extends AppCompatActivity implements DatePickerDialog.
     FirebaseDatabase database;
     DatabaseReference details;
     ArtistPorfolio currentPortfolio;
-
+    Request request;
 
     FloatingActionButton fabart;
     RelativeLayout rootLayout1;
@@ -69,7 +69,7 @@ public class ArtistDetail extends AppCompatActivity implements DatePickerDialog.
         database = FirebaseDatabase.getInstance();
         details = database.getReference("ArtistPortfolio");
 
-        numberButton = (ElegantNumberButton) findViewById(R.id.number_button);
+//        numberButton = (ElegantNumberButton) findViewById(R.id.number_button);
 
 //                btnCart = (FloatingActionButton) findViewById(R.id.btnCart);
 //
@@ -195,6 +195,46 @@ public class ArtistDetail extends AppCompatActivity implements DatePickerDialog.
     }
 
     private void addrequest() {
+        final ProgressDialog mDialog = new ProgressDialog(this);
+        mDialog.setMessage("Sending..");
+        mDialog.show();
+
+        request = new Request();
+            request.setLocation(edtLoc.getText().toString());
+            request.setCurrentdate(dateText.getText().toString());
+            request.setCurrenttime(timeText.getText().toString());
+            request.setPeople(edtpeople.getText().toString());
+            request.setRates(edtrate.getText().toString());
+//            request.setStatus();
+
+
+
+            Request request = new Request(
+                    edtLoc.getText().toString(),
+                    edtpeople.getText().toString(),
+                    edtrate.getText().toString(),
+                    dateText.getText().toString(),
+                    timeText.getText().toString()
+
+
+            );
+
+        DatabaseReference getId = FirebaseDatabase.getInstance().getReference("Request");
+        String id = getId.push().getKey();
+        FirebaseDatabase.getInstance().getReference("Request")
+                .child(id)
+                .setValue(request).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+
+                    Toast.makeText(ArtistDetail.this, "Successfull", Toast.LENGTH_SHORT).show();
+
+
+
+                }
+            }
+        });
     }
 
 

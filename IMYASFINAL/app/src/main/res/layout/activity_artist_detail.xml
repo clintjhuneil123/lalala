@@ -158,19 +158,19 @@
                     </LinearLayout>
 
 
-                    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/number_button"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginBottom="18dp"
-                        app:textSize="8sp"
-                        app:backGroundColor="@color/colorAccent"
-                        app:initialNumber="1"
-                        app:finalNumber="20"
+                    <!--<com.cepheuen.elegantnumberbutton.view.ElegantNumberButton-->
+                        <!--android:layout_width="100dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:id="@+id/number_button"-->
+                        <!--android:layout_marginTop="8dp"-->
+                        <!--android:layout_marginLeft="8dp"-->
+                        <!--android:layout_marginBottom="18dp"-->
+                        <!--app:textSize="8sp"-->
+                        <!--app:backGroundColor="@color/colorAccent"-->
+                        <!--app:initialNumber="1"-->
+                        <!--app:finalNumber="20"-->
 
-                    />
+                    <!--/>-->
 
                     <TextView
                         android:id="@+id/artist_loc"
@@ -179,7 +179,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_weight="1"
                         android:padding="12dp"
-                        android:text="Full Name"
+                        android:text="Address"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp"
                         android:textStyle="bold" />

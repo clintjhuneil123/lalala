@@ -20,6 +20,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,10 +48,10 @@ public class Home extends AppCompatActivity
 //    String categoryid="";
     FirebaseAuth mAuth;
     TextView txtFullName,txtEmail;
-
+    ImageView artist_ima;
     RecyclerView recyler_menu;
     RecyclerView.LayoutManager LayoutManager;
-
+    Artist art;
     FirebaseRecyclerAdapter<Artist, MenuViewHolder> adapter;
 
     @Override
@@ -74,14 +75,7 @@ public class Home extends AppCompatActivity
 
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               Intent cartIntent = new Intent(Home.this,Cart.class);
-               startActivity(cartIntent);
-            }
-        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -100,6 +94,7 @@ public class Home extends AppCompatActivity
         recyler_menu = (RecyclerView) findViewById(R.id.recycler_menu);
         recyler_menu.setHasFixedSize(true);
         LayoutManager = new LinearLayoutManager(this);
+        artist_ima = (ImageView) findViewById(R.id.imagvIEW);
         recyler_menu.setLayoutManager(LayoutManager);
 
 
@@ -113,7 +108,9 @@ public class Home extends AppCompatActivity
         getCurrentUser.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        art = dataSnapshot.getValue(Artist.class);
                         if(dataSnapshot.exists()){
+//                            Picasso.get().load(art.getImage()).into(artist_ima);
                             String email = dataSnapshot.child("email").getValue().toString();
                             String  name = dataSnapshot.child("firstname").getValue().toString();
                             txtFullName.setText(name);
@@ -220,10 +217,10 @@ public class Home extends AppCompatActivity
         if (id == R.id.nav_artist) {
 
         }else if (id == R.id.nav_view) {
-            startActivity(new Intent(Home.this, Cart.class));
+            startActivity(new Intent(Home.this, Booking.class));
             // Handle the camera action
         } else if (id == R.id.nav_book) {
-            startActivity(new Intent(Home.this, ArtistDetail.class));
+            startActivity(new Intent(Home.this, Booking.class));
 
         } else if (id == R.id.nav_profile) {
 

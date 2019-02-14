@@ -8,7 +8,6 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -23,19 +22,18 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.imyasfinal.Common.CommonArt;
-import com.example.imyasfinal.Database.Database;
 import com.example.imyasfinal.Interface.ItemClickListener;
 import com.example.imyasfinal.ViewHolder.ListViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -43,7 +41,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
@@ -56,7 +53,6 @@ import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.UUID;
 
 public class ArtistAddList extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener, View.OnClickListener {
 
@@ -386,5 +382,103 @@ public class ArtistAddList extends AppCompatActivity implements DatePickerDialog
             DialogFragment timePicker = new TimePickerFragment();
             timePicker.show(getSupportFragmentManager(), "time picker");
         }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        if(item.getTitle().equals(CommonArt.UPDATE))
+        {
+            showupdatedialog(searchadapter.getRef(item.getOrder()).getKey(),searchadapter.getItem(item.getOrder()));
+        }
+        else if(item.getTitle().equals(CommonArt.DELETE))
+        {
+            deleteportfolio(searchadapter.getRef(item.getOrder()).getKey());
+        }
+
+
+        return super.onContextItemSelected(item);
+    }
+
+    private void deleteportfolio(String key) {
+        list1.child(key).removeValue();
+    }
+
+    private void showupdatedialog(String key, final ArtistPorfolio item) {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ArtistAddList.this);
+        alertDialog.setTitle("Edit Portfolio");
+        alertDialog.setMessage("Please fill full information");
+
+        LayoutInflater inflater = this.getLayoutInflater();
+        View add_menu_layout = inflater.inflate(R.layout.add_new_artist_layout, null);
+        ImgArtistPhoto = (ImageView) add_menu_layout.findViewById(R.id.photoartist) ;
+        edtName = add_menu_layout.findViewById(R.id.edtName);
+        edtDesc = add_menu_layout.findViewById(R.id.edtDescription);
+        edtLoc = add_menu_layout.findViewById(R.id.edtLocation);
+        dateText=add_menu_layout.findViewById(R.id.dateText);
+        timeText=add_menu_layout.findViewById(R.id.timeText);
+        datebtn = add_menu_layout.findViewById(R.id.datebtn);
+        timebtn = add_menu_layout.findViewById(R.id.timebtn);
+        timebtn.setOnClickListener(this);
+        datebtn.setOnClickListener(this);
+
+        edtName.setText(item.getName());
+        edtDesc.setText(item.getDescription());
+        edtLoc.setText(item.getLocation());
+        dateText.setText(item.getCurrentDate());
+        timeText.setText(item.getCurrentTime());
+
+
+        edtPrice = add_menu_layout.findViewById(R.id.edtPrice);
+        btnUpload = add_menu_layout.findViewById(R.id.btnUpload);
+
+
+        ImgArtistPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Build.VERSION.SDK_INT <= 22) {
+                    checkandRequestForPermission();
+                } else {
+                    openGallery();
+                }
+            }
+        });
+
+
+        alertDialog.setView(add_menu_layout);
+        alertDialog.setIcon(R.drawable.ic_shopping_cart_black_24dp);
+
+        alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+
+                if(newartistPorfolio != null)
+                {
+                    item.setName(edtName.getText().toString());
+                    item.setDescription(edtDesc.getText().toString());
+                    item.setLocation(edtLoc.getText().toString());
+                    item.getCurrentDate();
+                    item.getCurrentTime();
+
+
+                    list1.push().setValue(newartistPorfolio);
+                    Snackbar.make(rootLayout,"Portfolio"+newartistPorfolio.getName()+"was edited",Snackbar.LENGTH_SHORT)
+                            .show();;
+                }
+            }
+        });
+        alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.dismiss();
+
+            }
+        });
+
+        alertDialog.show();
+
+
     }
 }

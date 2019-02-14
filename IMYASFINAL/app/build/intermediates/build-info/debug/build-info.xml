@@ -5,114 +5,133 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
+    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.3.1"
-    timestamp="1550101141734"
-    token="7004994862311024183"
+    timestamp="1550111086227"
+    token="-7243475333162334761"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1434" />
+        duration="886" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="31" />
+        duration="112" />
     <task
         name="verifier"
-        duration="5" />
+        duration="46" />
 
     <artifact
-        location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1550097951310"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="COMPATIBLE"
+        timestamp="1550110951094"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1550100972989"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1550111086227"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="C:\Users\Administrator\Pictures\IMYASFINAL\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
-        timestamp="1550101141734"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Administrator\Desktop\heyyooooo\IMYASFINAL\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
     </build>
 
 </instant-run>
